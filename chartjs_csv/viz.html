@@ -1,0 +1,46 @@
+<head>
+	<script src="https://cdn.jsdelivr.net/npm/moment@2.24.0/min/moment.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+  <script type="text/javascript" src="chartjs-plugin-streaming.js"></script>
+	<style>
+		.label {
+			display: inline-block;
+			text-align: right;
+			width: 90px;
+		}
+		.value {
+			display: inline-block;
+			text-align: left;
+			width: 60px;
+		}
+		.control {
+			width: 200px;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<canvas id="myChart"></canvas>
+	</div>
+	<p>
+
+	</p>
+	<div>
+		<span class="label">表示期間:</span>
+    <span id="durationValue" class="value">1日</span>
+		<span><input type="range" min="1" max="7" step="1" value="1" id="duration" class="control"></span>
+	</div>
+	<div>
+		<span class="label">倍速: ×</span>
+		<span id="refreshValue" class="value">3600</span>
+		<span><input type="range" min="3600" max="36000" step="3600" value="3600" id="refresh" class="control"></span>
+	</div>
+	<div>
+		<span class="label">pause:</span>
+		<span id="pauseValue" class="value">false</span>
+		<span><input type="checkbox" id="pause" class="control"></span>
+  </div>
+  <div id="time" hidden></div>
+</body>
+
+<script type="text/javascript" src="main.js"></script>
