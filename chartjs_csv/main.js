@@ -11,9 +11,8 @@ var chartColors = {
 };
 
 var colorNames = Object.keys(chartColors);
-
-var value
-time_count = 0
+var target = document.getElementById("time");
+var time_count = 0
 
 //CSVファイルを読み込む関数getCSV()の定義
 function getCSV(){
@@ -37,8 +36,6 @@ function convertCSVtoArray(str){
   }
   return result
 }
-
-target = document.getElementById("time");
 
 function onRefresh(chart) {
   time_count = time_count + 1
@@ -113,8 +110,6 @@ var config = {
 		}
 	}
 };
-
-
 
 window.onload = function() {
 	var ctx = document.getElementById('myChart').getContext('2d');
